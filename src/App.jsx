@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import TaskInput from './components/TaskInput';
 import TaskList from './components/TaskList';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './index.css'; // Make sure to import Tailwind CSS
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
+    toast.success('Task added successfully');
   };
 
   const updateTask = (index, newTask) => {
@@ -16,18 +19,21 @@ function App() {
       i === index ? newTask : task
     );
     setTasks(updatedTasks);
+    toast.success('Task updated successfully');
   };
 
   const deleteTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
+    toast.success('Task deleted successfully');
   };
 
   return (
-    <div className="container mx-auto p-4 min-h-screen flex flex-col items-center bg-gray-100">
-      <h1 className="text-3xl font-bold mb-6 text-center">Itinerary Planner</h1>
+    <div className="p-4 min-h-screen flex flex-col items-center bg-custom-blue">
+      <h1 className="text-3xl font-bold mb-6 text-center text-white">Itinerary Planner</h1>
       <TaskInput addTask={addTask} />
       <TaskList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
+      <ToastContainer />
     </div>
   );
 }

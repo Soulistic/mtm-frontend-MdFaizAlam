@@ -1,5 +1,6 @@
 // src/TaskInput.js
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 function TaskInput({ addTask }) {
   const [task, setTask] = useState('');
@@ -9,6 +10,9 @@ function TaskInput({ addTask }) {
     if (task.trim()) {
       addTask(task);
       setTask('');
+    }
+    else{
+        toast.error('Please input your task');
     }
   };
 
