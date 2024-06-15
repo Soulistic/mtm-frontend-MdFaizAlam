@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-
+import { CiEdit } from "react-icons/ci";
+import { MdDeleteForever } from "react-icons/md";
+import { MdOutlineSecurityUpdateGood } from "react-icons/md";
 function TaskList({ tasks, updateTask, deleteTask }) {
   const [isEditing, setIsEditing] = useState(null);
   const [newTask, setNewTask] = useState('');
@@ -41,8 +43,9 @@ function TaskList({ tasks, updateTask, deleteTask }) {
                 <button
                   onClick={() => handleUpdate(index)}
                   className="bg-green-500 text-white p-2 rounded-lg ml-2 shadow-md hover:bg-green-600 transition duration-200 mr-2"
+                  title="Update"
                 >
-                  Update
+                  <MdOutlineSecurityUpdateGood />
                 </button>
               </div>
             ) : (
@@ -55,15 +58,17 @@ function TaskList({ tasks, updateTask, deleteTask }) {
                 <button
                   onClick={() => handleEdit(index)}
                   className="bg-yellow-500 text-white p-2 rounded-lg shadow-md hover:bg-yellow-600 transition duration-200"
+                  title="Edit"
                 >
-                  Edit
+                  <CiEdit />
                 </button>
               )}
               <button
                 onClick={() => handleDelete(index)}
                 className="bg-red-500 text-white p-2 rounded-lg shadow-md hover:bg-red-600 transition duration-200 ml-2"
+                title="Delete"
               >
-                Delete
+                <MdDeleteForever />
               </button>
             </div>
           </li>
