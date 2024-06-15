@@ -22,7 +22,7 @@ The Itinerary Planner is a simple React application designed for managing travel
 ## Installation
 
 1. **Clone the repository:**
-   git clone https://github.com/yourname/mtm-frontend-yourname.git
+   git clone https://github.com/yourname/mtm-frontend-MdFaizAlam.git
    cd mtm-frontend-yourname
 2. **Install Dependencies:**
     npm install
