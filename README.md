@@ -34,7 +34,7 @@ The Itinerary Planner is a simple React application designed for managing travel
 2. src/components/TaskList.js: Displays, updates, and deletes tasks.
 3. src/App.js: Main component that ties everything together.
 4. src/index.css: Contains Tailwind CSS for styling.
-![HomePage](image-3.png)
-![Adding Task](image.png)
-![updating](image-1.png)
-![Deleting](image-2.png)
+![Homepage](image-3.png)
+![Adding](image.png)
+![Removing](image-1.png)
+![Updating](image-2.png)
