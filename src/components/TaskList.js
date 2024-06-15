@@ -26,10 +26,10 @@ function TaskList({ tasks, updateTask, deleteTask }) {
   };
 
   return (
-    <div className="task-list-container max-h-96 overflow-y-auto w-96 p-2">
+    <div className="task-list-container max-h-96 overflow-y-auto w-[445px]">
       <ul className="list-none p-0">
         {tasks.map((task, index) => (
-          <li key={index} className="mb-4 flex items-center justify-between bg-white p-4 rounded-lg shadow-md">
+          <li key={index} className="mb-4 flex items-center justify-between bg-white p-2 rounded-lg shadow-md">
             {isEditing === index ? (
               <div className="flex-grow flex items-center">
                 <input
